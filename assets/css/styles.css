@@ -832,7 +832,6 @@ p { color: var(--ink-soft); }
 @media (min-width: 860px) {
   .wa-sticky-mobile { display: none; }
   .wa-float-group { right: 28px; bottom: 28px; }
-  .wa-float-label { display: none; }
   .ig-float { right: 28px; bottom: 100px; }
   .fb-float { right: 28px; bottom: 172px; }
 }
