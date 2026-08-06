@@ -336,6 +336,8 @@ p { color: var(--ink-soft); }
 
 /* ---------- Sections generic ---------- */
 .section { padding: 64px 0; }
+#proceso { padding-bottom: 28px; }
+#testimonios { padding-top: 28px; }
 .section h2 { margin-bottom: 18px; }
 .section > .container > p,
 .section-solution p { margin-bottom: 14px; }
