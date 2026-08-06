@@ -556,13 +556,23 @@ p { color: var(--ink-soft); }
 .testimonial-card footer { margin-top: 14px; font-weight: 700; color: var(--navy); font-size: 0.85rem; }
 
 @media (min-width: 760px) {
-  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .testimonial-card { text-align: center; }
 }
 
 /* ---------- Authority ---------- */
 .section-authority { background: var(--bg-soft); }
-.authority-card {
+.authority-grid {
   margin-top: 30px;
+  display: grid;
+  gap: 18px;
+}
+.authority-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -577,7 +587,7 @@ p { color: var(--ink-soft); }
   width: 68px; height: 68px;
   border-radius: 50%;
   background: var(--bg-soft);
-  border: 2px solid var(--gold);
+  border: 2px dashed var(--gold);
   display: flex; align-items: center; justify-content: center;
   color: var(--ink-faint);
   font-size: 0.7rem;
@@ -585,6 +595,7 @@ p { color: var(--ink-soft); }
   overflow: hidden;
   flex-shrink: 0;
 }
+.authority-photo.has-photo { border-style: solid; }
 .authority-photo img {
   width: 100%;
   height: 100%;
@@ -597,10 +608,11 @@ p { color: var(--ink-soft); }
 .authority-facts li { font-size: 0.88rem; color: var(--ink-soft); }
 
 @media (min-width: 640px) {
-  .authority-card { padding: 28px; gap: 22px; }
-  .authority-photo { width: 96px; height: 96px; }
-  .authority-role { font-size: 0.9rem; }
-  .authority-facts li { font-size: 0.92rem; }
+  .authority-grid { grid-template-columns: repeat(2, 1fr); }
+  .authority-card { padding: 24px; gap: 16px; }
+  .authority-photo { width: 84px; height: 84px; }
+  .authority-role { font-size: 0.88rem; }
+  .authority-facts li { font-size: 0.88rem; }
 }
 
 /* ---------- FAQ ---------- */
