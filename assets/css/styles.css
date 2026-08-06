@@ -539,11 +539,11 @@ p { color: var(--ink-soft); }
 }
 .testimonial-card {
   background: var(--surface);
-  border: 1px dashed var(--border);
+  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 24px 22px;
 }
-.testimonial-placeholder p:not(.testimonial-tag) { color: var(--ink-faint); font-style: italic; font-size: 0.9rem; }
+.testimonial-card p:not(.testimonial-tag) { color: var(--ink-soft); font-size: 0.92rem; }
 .testimonial-tag {
   font-size: 0.72rem;
   font-weight: 800;
@@ -556,7 +556,7 @@ p { color: var(--ink-soft); }
 .testimonial-card footer { margin-top: 14px; font-weight: 700; color: var(--navy); font-size: 0.85rem; }
 
 @media (min-width: 760px) {
-  .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---------- Authority ---------- */
