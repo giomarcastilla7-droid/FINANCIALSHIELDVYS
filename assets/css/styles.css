@@ -734,6 +734,26 @@ p { color: var(--ink-soft); }
 .wa-float:hover { transform: scale(1.06); filter: brightness(0.94); }
 .wa-float .icon-wa { width: 28px; height: 28px; }
 
+/* ---------- Instagram floating button ---------- */
+.ig-float {
+  position: fixed;
+  right: 18px;
+  bottom: 86px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 90;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.ig-float:hover { transform: scale(1.06); filter: brightness(1.15); }
+.icon-ig { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+
 /* ---------- Mobile sticky CTA bar ---------- */
 .wa-sticky-mobile {
   position: fixed;
@@ -756,6 +776,11 @@ p { color: var(--ink-soft); }
 @media (min-width: 860px) {
   .wa-sticky-mobile { display: none; }
   .wa-float { display: flex; right: 28px; bottom: 28px; }
+  .ig-float { right: 28px; bottom: 100px; }
+}
+
+@media (max-width: 859px) {
+  .ig-float { bottom: calc(78px + 14px); }
 }
 
 /* Give room at bottom on mobile so sticky bar doesn't cover content */
