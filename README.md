@@ -1,7 +1,22 @@
-# VYS Abogados — Landing de Insolvencia de Persona Natural
+# V&S Abogados · Financial Shield — Landing de Insolvencia de Persona Natural
 
 Landing page estática (HTML + CSS + JS puro, sin frameworks ni build step) diseñada
 para un solo objetivo: que el visitante inicie una consulta **gratis por WhatsApp**.
+
+## Identidad de marca
+
+- **Nombre:** V&S Abogados (línea de servicio "Financial Shield").
+- **Paleta corporativa:** azul marino `#14203F` (`--navy`), dorado `#C9A360` /
+  `#8A6A26` (`--gold` / `--gold-deep`) y blanco/crema `#F8F8F5` (`--bg`). Definida
+  como tokens en `assets/css/styles.css`.
+- **WhatsApp:** `+57 304 304 6875` — ya configurado en `assets/js/main.js` y en
+  todos los enlaces `wa.me` del sitio.
+- **Logo:** el emblema (círculo navy, "V&S" en dorado con laurel) se recreó como
+  SVG inline en `index.html` (header, footer y mockup de chat) porque el archivo
+  original enviado por chat no quedó accesible como archivo en esta sesión para
+  incrustarlo pixel a pixel. Si tienes el PNG/SVG original en alta resolución,
+  compártelo como archivo (no solo en el chat) y se reemplaza el emblema recreado
+  por el archivo real, incluyendo el favicon.
 
 ## Cómo verla localmente
 
@@ -12,14 +27,13 @@ python3 -m http.server 8080
 # abrir http://localhost:8080
 ```
 
-## ⚠️ Placeholders que DEBEN reemplazarse antes de publicar
+## ⚠️ Placeholders que aún deben reemplazarse antes de publicar
 
 Por instrucción explícita del brief, no se inventó ningún dato de la firma
-(número, nombre del abogado, fotos, testimonios, cifras). Búscalos y reemplázalos:
+(nombre del abogado, fotos, testimonios, cifras, NIT). Búscalos y reemplázalos:
 
 | Placeholder | Dónde | Qué va |
 |---|---|---|
-| `WHATSAPP_NUMBER` | `assets/js/main.js` (constante al inicio), `index.html` footer y JSON-LD | Número real de WhatsApp Business, formato internacional solo dígitos (ej. `573001234567`) |
 | `[NOMBRE_ABOGADO_O_FIRMA]`, `[FOTO_ABOGADO]`, `[ESPECIALIDAD / TARJETA PROFESIONAL N.° XXXXX]`, `[AÑOS_EXPERIENCIA]`, `[ÁREA_DE_DERECHO]`, `[CIUDAD]` | sección `#confianza` | Datos reales y verificables del abogado o la firma |
 | `[COBERTURA_NACIONAL_SI_APLICA]` | sección `#confianza` y FAQ | Confirmar si realmente hay cobertura nacional |
 | `[NÚMERO_DE_CASOS_SI_ES_VERIFICABLE]`, `[ASOCIACIONES_PROFESIONALES_SI_APLICA]` | sección `#confianza` | Solo si son datos comprobables |

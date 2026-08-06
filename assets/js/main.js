@@ -4,10 +4,9 @@
   /* =====================================================================
      CONFIGURACIÓN — reemplazar antes de publicar
      ===================================================================== */
-  // TODO: reemplazar por el número real de WhatsApp Business de VYS Abogados,
-  // en formato internacional, SOLO dígitos (código de país + número).
-  // Ejemplo Colombia: "573001234567"
-  var WHATSAPP_NUMBER = "WHATSAPP_NUMBER";
+  // Número real de WhatsApp Business de V&S Abogados (+57 304 304 6875),
+  // en formato internacional, solo dígitos.
+  var WHATSAPP_NUMBER = "573043046875";
 
   var dataLayer = (window.dataLayer = window.dataLayer || []);
 
