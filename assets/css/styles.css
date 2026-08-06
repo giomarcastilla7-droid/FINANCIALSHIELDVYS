@@ -618,6 +618,17 @@ p { color: var(--ink-soft); }
 .authority-role { color: var(--gold-deep); font-weight: 700; font-size: 0.96rem; margin-bottom: 10px; }
 .authority-facts { display: grid; gap: 6px; }
 .authority-facts li { font-size: 0.88rem; color: var(--ink-soft); }
+.authority-social { margin-top: 10px; display: flex; }
+.authority-social a {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--bg-gold-tint);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s ease;
+}
+.authority-social a:hover { background: var(--gold); }
+.authority-social svg { width: 15px; height: 15px; fill: none; stroke: var(--gold-deep); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.authority-social a:hover svg { stroke: var(--navy); }
 
 @media (min-width: 640px) {
   .authority-grid { grid-template-columns: repeat(2, 1fr); }
