@@ -137,41 +137,6 @@
   }
 
   /* =====================================================================
-     MOBILE STICKY BAR — ocultar cuando el CTA final ya es visible
-     ===================================================================== */
-  function initStickyBar() {
-    var sticky = document.getElementById("wa-sticky-mobile");
-    var finalSection = document.getElementById("cta-final");
-    var heroSection = document.getElementById("hero");
-    if (!sticky) return;
-
-    if (!("IntersectionObserver" in window) || !finalSection) return;
-
-    var observer = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          sticky.classList.toggle("is-hidden", entry.isIntersecting);
-        });
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(finalSection);
-
-    // Also hide sticky bar while the hero (which already has a full CTA) is on screen.
-    if (heroSection) {
-      var heroObserver = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            sticky.classList.toggle("is-hidden", entry.intersectionRatio > 0.5);
-          });
-        },
-        { threshold: [0, 0.5, 1] }
-      );
-      heroObserver.observe(heroSection);
-    }
-  }
-
-  /* =====================================================================
      SCROLL DEPTH TRACKING
      ===================================================================== */
   function initScrollTracking() {
@@ -213,7 +178,6 @@
     initWhatsAppCtas();
     initFaq();
     initEligibilityQuiz();
-    initStickyBar();
     initScrollTracking();
     initFooterYear();
   });

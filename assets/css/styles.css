@@ -615,7 +615,7 @@ p { color: var(--ink-soft); }
   object-position: center 20%;
   border-radius: 50%;
 }
-.authority-role { color: var(--gold-deep); font-weight: 700; font-size: 0.96rem; margin-bottom: 10px; }
+.authority-role { color: var(--gold-deep); font-weight: 700; font-size: 0.8rem; margin-bottom: 10px; }
 .authority-facts { display: grid; gap: 6px; }
 .authority-facts li { font-size: 0.88rem; color: var(--ink-soft); }
 .authority-social { margin-top: 10px; display: flex; }
@@ -634,7 +634,7 @@ p { color: var(--ink-soft); }
   .authority-grid { grid-template-columns: repeat(2, 1fr); }
   .authority-card { padding: 24px; gap: 16px; }
   .authority-photo { width: 84px; height: 84px; }
-  .authority-role { font-size: 1rem; }
+  .authority-role { font-size: 0.85rem; }
   .authority-facts li { font-size: 0.88rem; }
 }
 
@@ -814,37 +814,16 @@ p { color: var(--ink-soft); }
 .icon-fb rect { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .icon-fb path { fill: currentColor; }
 
-/* ---------- Mobile sticky CTA bar ---------- */
-.wa-sticky-mobile {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 95;
-  padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-  background: rgba(20, 32, 63, 0.96);
-  backdrop-filter: saturate(180%) blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  transform: translateY(0);
-  transition: transform 0.25s ease;
-}
-.wa-sticky-mobile.is-hidden { transform: translateY(110%); }
-.btn-sticky { width: 100%; padding: 15px 20px; }
-
 @media (min-width: 860px) {
-  .wa-sticky-mobile { display: none; }
   .wa-float-group { right: 28px; bottom: 28px; }
   .ig-float { right: 28px; bottom: 100px; }
   .fb-float { right: 28px; bottom: 172px; }
 }
 
-/* En mobile, la barra sticky de WhatsApp ya cubre la parte inferior;
-   el grupo flotante queda apilado justo encima, con Instagram y Facebook arriba. */
+/* Mobile: los tres botones flotantes quedan apilados sobre el borde inferior,
+   respetando el area segura (notch / home indicator). */
 @media (max-width: 859px) {
-  .wa-float-group { bottom: calc(78px + 30px); }
-  .ig-float { bottom: calc(78px + 30px + 58px + 14px); }
-  .fb-float { bottom: calc(78px + 30px + 58px + 14px + 58px + 14px); }
-}
-
-/* Give room at bottom on mobile so sticky bar doesn't cover content */
-@media (max-width: 859px) {
-  body { padding-bottom: 78px; }
+  .wa-float-group { bottom: calc(18px + env(safe-area-inset-bottom)); }
+  .ig-float { bottom: calc(18px + env(safe-area-inset-bottom) + 58px + 14px); }
+  .fb-float { bottom: calc(18px + env(safe-area-inset-bottom) + 58px + 14px + 58px + 14px); }
 }
