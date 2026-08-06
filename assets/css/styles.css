@@ -412,6 +412,15 @@ p { color: var(--ink-soft); }
   font-weight: 800;
 }
 .requirements-note { font-size: 0.85rem; color: var(--ink-faint); font-style: italic; margin: 0; }
+.solution-note {
+  background: var(--bg-gold-tint);
+  border: 1px solid var(--gold-pale);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  margin-bottom: 30px;
+}
+.solution-note p { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+.solution-note strong { color: var(--navy); }
 
 /* ---------- Benefits ---------- */
 .section-benefits { background: var(--bg-soft); }
