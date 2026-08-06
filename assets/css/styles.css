@@ -702,6 +702,8 @@ p { color: var(--ink-soft); }
 .footer-social a:hover { background: var(--gold); }
 .footer-social svg { width: 17px; height: 17px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .footer-social a:hover svg { stroke: var(--navy); }
+.footer-social .icon-fb path { fill: #fff; }
+.footer-social a:hover .icon-fb path { fill: var(--navy); }
 .footer-col h3 { color: #fff; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
 .footer-col ul { display: grid; gap: 10px; }
 .footer-col a { text-decoration: none; color: #C6CADA; font-size: 0.9rem; }
@@ -772,7 +774,9 @@ p { color: var(--ink-soft); }
   transition: transform 0.15s ease, filter 0.15s ease;
 }
 .fb-float:hover { transform: scale(1.06); filter: brightness(0.94); }
-.icon-fb { width: 26px; height: 26px; fill: currentColor; }
+.icon-fb { width: 28px; height: 28px; }
+.icon-fb rect { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.icon-fb path { fill: currentColor; }
 
 /* ---------- Mobile sticky CTA bar ---------- */
 .wa-sticky-mobile {
@@ -801,8 +805,8 @@ p { color: var(--ink-soft); }
 }
 
 @media (max-width: 859px) {
-  .ig-float { bottom: calc(78px + 14px); }
-  .fb-float { bottom: calc(78px + 14px + 58px + 14px); }
+  .ig-float { bottom: calc(78px + 30px); }
+  .fb-float { bottom: calc(78px + 30px + 58px + 14px); }
 }
 
 /* Give room at bottom on mobile so sticky bar doesn't cover content */
