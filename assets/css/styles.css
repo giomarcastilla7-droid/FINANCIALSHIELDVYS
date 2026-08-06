@@ -433,7 +433,7 @@ p { color: var(--ink-soft); }
   .benefits-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 960px) {
-  .benefits-grid { grid-template-columns: repeat(4, 1fr); }
+  .benefits-grid { grid-template-columns: repeat(3, 1fr); max-width: 920px; margin-left: auto; margin-right: auto; }
 }
 
 .benefits-cta { margin-top: 34px; text-align: center; }
