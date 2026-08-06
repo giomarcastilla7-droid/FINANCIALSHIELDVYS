@@ -575,12 +575,19 @@ p { color: var(--ink-soft); }
   width: 96px; height: 96px;
   border-radius: 50%;
   background: var(--bg-soft);
-  border: 2px dashed var(--border);
+  border: 2px solid var(--gold);
   display: flex; align-items: center; justify-content: center;
   color: var(--ink-faint);
   font-size: 0.7rem;
   text-align: center;
   margin: 0 auto;
+  overflow: hidden;
+}
+.authority-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .authority-role { color: var(--gold-deep); font-weight: 700; font-size: 0.9rem; margin-bottom: 12px; }
 .authority-facts { display: grid; gap: 6px; }
