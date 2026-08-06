@@ -554,6 +554,7 @@ p { color: var(--ink-soft); }
 }
 .testimonial-tag:first-child { margin-top: 0; }
 .testimonial-card footer { margin-top: 14px; font-weight: 700; color: var(--navy); font-size: 0.85rem; }
+.testimonials-cta { text-align: center; }
 
 @media (min-width: 760px) {
   .testimonials-grid {
