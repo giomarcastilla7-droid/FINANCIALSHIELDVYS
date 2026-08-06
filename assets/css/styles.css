@@ -332,7 +332,7 @@ p { color: var(--ink-soft); }
   font-weight: 600;
   letter-spacing: 0.01em;
 }
-.trust-bar .dot { opacity: 0.5; color: var(--gold); }
+.trust-bar .dot { opacity: 1; color: var(--gold); font-weight: 800; }
 
 /* ---------- Sections generic ---------- */
 .section { padding: 64px 0; }
@@ -437,6 +437,7 @@ p { color: var(--ink-soft); }
 }
 
 .benefits-cta { margin-top: 34px; text-align: center; }
+.section-cta { margin-top: 24px; text-align: center; }
 
 /* ---------- Eligibility quiz ---------- */
 .eligibility-sub { margin-bottom: 30px; color: var(--ink-faint); }
@@ -604,7 +605,7 @@ p { color: var(--ink-soft); }
   object-position: center 20%;
   border-radius: 50%;
 }
-.authority-role { color: var(--gold-deep); font-weight: 700; font-size: 0.85rem; margin-bottom: 10px; }
+.authority-role { color: var(--gold-deep); font-weight: 700; font-size: 0.96rem; margin-bottom: 10px; }
 .authority-facts { display: grid; gap: 6px; }
 .authority-facts li { font-size: 0.88rem; color: var(--ink-soft); }
 
@@ -612,7 +613,7 @@ p { color: var(--ink-soft); }
   .authority-grid { grid-template-columns: repeat(2, 1fr); }
   .authority-card { padding: 24px; gap: 16px; }
   .authority-photo { width: 84px; height: 84px; }
-  .authority-role { font-size: 0.88rem; }
+  .authority-role { font-size: 1rem; }
   .authority-facts li { font-size: 0.88rem; }
 }
 
@@ -688,6 +689,17 @@ p { color: var(--ink-soft); }
   color: var(--gold);
   margin-top: 2px;
 }
+.footer-social { margin-top: 12px; display: flex; gap: 10px; }
+.footer-social a {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s ease;
+}
+.footer-social a:hover { background: var(--gold); }
+.footer-social svg { width: 17px; height: 17px; fill: none; stroke: #fff; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.footer-social a:hover svg { stroke: var(--navy); }
 .footer-col h3 { color: #fff; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
 .footer-col ul { display: grid; gap: 10px; }
 .footer-col a { text-decoration: none; color: #C6CADA; font-size: 0.9rem; }
