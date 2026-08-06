@@ -736,10 +736,27 @@ p { color: var(--ink-soft); }
 }
 
 /* ---------- WhatsApp floating button ---------- */
-.wa-float {
+.wa-float-group {
   position: fixed;
   right: 18px;
   bottom: 18px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.wa-float-label {
+  background: #fff;
+  color: var(--navy);
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+}
+.wa-float {
+  position: static;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -749,7 +766,7 @@ p { color: var(--ink-soft); }
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
-  z-index: 90;
+  flex-shrink: 0;
   transition: transform 0.15s ease, filter 0.15s ease;
 }
 .wa-float:hover { transform: scale(1.06); filter: brightness(0.94); }
@@ -812,20 +829,20 @@ p { color: var(--ink-soft); }
 .wa-sticky-mobile.is-hidden { transform: translateY(110%); }
 .btn-sticky { width: 100%; padding: 15px 20px; }
 
-/* En mobile, la barra sticky ya cumple la función del botón flotante:
-   mostrar ambos a la vez los hace competir por el mismo espacio. */
-.wa-float { display: none; }
-
 @media (min-width: 860px) {
   .wa-sticky-mobile { display: none; }
-  .wa-float { display: flex; right: 28px; bottom: 28px; }
+  .wa-float-group { right: 28px; bottom: 28px; }
+  .wa-float-label { display: none; }
   .ig-float { right: 28px; bottom: 100px; }
   .fb-float { right: 28px; bottom: 172px; }
 }
 
+/* En mobile, la barra sticky de WhatsApp ya cubre la parte inferior;
+   el grupo flotante queda apilado justo encima, con Instagram y Facebook arriba. */
 @media (max-width: 859px) {
-  .ig-float { bottom: calc(78px + 30px); }
-  .fb-float { bottom: calc(78px + 30px + 58px + 14px); }
+  .wa-float-group { bottom: calc(78px + 30px); }
+  .ig-float { bottom: calc(78px + 30px + 58px + 14px); }
+  .fb-float { bottom: calc(78px + 30px + 58px + 14px + 58px + 14px); }
 }
 
 /* Give room at bottom on mobile so sticky bar doesn't cover content */
